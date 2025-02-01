@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gissa Talet</title>
+</head>
+<body>
+    <h1>Gissa Talet</h1>
+    
+    {% if meddelande %}
+        <p>{{ meddelande }}</p>
+    {% endif %}
+    
+    {% if gissningar_kvar is defined %}
+        <p>Du har {{ gissningar_kvar }} gissningar kvar.</p>
+    {% endif %}
+    
+    <form method="POST">
+        <input type="number" name="gissning" placeholder="Gissa ett tal">
+        <button type="submit">Gissa</button>
+    </form>
+</body>
+</html>
